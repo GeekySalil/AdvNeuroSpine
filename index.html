@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Neuro Spine & Pain Management Centre | Dr. S. K. Jaiswal</title>
+    <meta name="description" content="North India's First Spine Endoscopy Center in Varanasi. Minimally invasive treatments for back, neck, joint, and facial pain without stitches or anesthesia.">
+    
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="Advanced Neuro Spine Pain Management Centre">
+    <meta property="og:description" content="Expert minimally invasive treatments for complex spine and pain disorders in Varanasi.">
+    <meta property="og:type" content="website">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            900: '#0B192C', // Very Dark Midnight Blue
+                            800: '#1A365D', // Deep Blue
+                            700: '#2A4365', // Muted Blue
+                            600: '#3182CE', // Bright Blue
+                        },
+                        accent: {
+                            500: '#00E5FF', // Neon Cyan
+                            600: '#00B8D4', // Deep Cyan
+                        },
+                        gold: '#F6E05E',
+                        // Added custom light greens for the background theme
+                        medgreen: {
+                            50: '#ECFDF5',  // Very light mint green (replaces white backgrounds)
+                            100: '#D1FAE5', // Slightly darker mint (replaces gray backgrounds)
+                            200: '#A7F3D0',
+                            800: '#065F46', // Dark green for text accents
+                        }
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(0, 229, 255, 0.4)',
+                        'glow-lg': '0 0 40px rgba(0, 229, 255, 0.3)',
+                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.1)',
+                        'green-soft': '0 10px 40px -10px rgba(6, 95, 70, 0.1)',
+                    },
+                    animation: {
+                        'marquee': 'marquee 30s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' }, // Translates 50% because we will duplicate the track
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            /* Updated base background to light green */
+            background-color: #ECFDF5;
+            overflow-x: hidden;
+        }
+
+        /* Gradient Text Utility */
+        .text-gradient {
+            background: linear-gradient(135deg, #00E5FF, #3182CE);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glassmorphism */
+        .glass-panel {
+            background: rgba(236, 253, 245, 0.85); /* Light green glass */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(209, 250, 229, 0.6);
+        }
+        
+        .glass-dark {
+            background: rgba(11, 25, 44, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 229, 255, 0.1);
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-active {
+            opacity: 1;
+            transform: translate(0);
+        }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Floating elements */
+        .floating { animation: float 6s ease-in-out infinite; }
+        .floating-fast { animation: float 4s ease-in-out infinite reverse; }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Abstract Background Blobs */
+        .bg-blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: 0;
+            opacity: 0.4;
+            border-radius: 50%;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #ECFDF5; } /* Match light green bg */
+        ::-webkit-scrollbar-thumb { background: #1A365D; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00E5FF; }
+        
+        /* Details marker hiding */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        
+        /* Hide scrollbar for marquee gallery but allow touch scroll */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-emerald-500 selection:text-white">
+
+    <header id="navbar" class="fixed w-full top-0 left-0 z-[100] transition-all duration-300 bg-emerald-50/95 backdrop-blur-md border-b border-emerald-200 shadow-sm h-20 sm:h-24 flex items-center">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center w-full">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 sm:gap-3 z-[120] group shrink-0 relative">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:shadow-green-soft transition-all duration-300 transform group-hover:-rotate-3 overflow-hidden border-2 border-emerald-500">
+                        <img src="Images/logo (1).png" alt="ANS PMC Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h1 class="font-heading font-extrabold text-brand-900 text-sm sm:text-lg md:text-xl lg:text-2xl leading-none tracking-tight">Advanced Neuro Spine</h1>
+                        <p class="text-[7px] sm:text-[9px] md:text-[10px] lg:text-[11px] font-bold text-emerald-700 tracking-[0.15em] sm:tracking-[0.2em] uppercase mt-1">Pain Management Centre</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav (Visible on Medium and Large Screens) -->
+                <nav class="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8">
+                    <a href="#notices" class="text-sm lg:text-base font-bold text-brand-900 hover:text-emerald-600 transition-colors">Notices</a>
+                    <a href="#about" class="text-sm lg:text-base font-bold text-brand-900 hover:text-emerald-600 transition-colors">About</a>
+                    <a href="#facilities" class="text-sm lg:text-base font-bold text-brand-900 hover:text-emerald-600 transition-colors">Facilities</a>
+                    <a href="#appointment" class="text-sm lg:text-base font-bold text-brand-900 hover:text-emerald-600 transition-colors">Find Us</a>
+                    
+                    <a href="#appointment" class="group relative px-4 lg:px-6 py-2 lg:py-2.5 text-sm lg:text-base font-bold text-white rounded-full bg-brand-900 overflow-hidden shadow-lg hover:shadow-green-soft transition-all whitespace-nowrap">
+                        <span class="relative z-10 flex items-center gap-2"><i class="fa-regular fa-calendar-check"></i> Book Appointment</span>
+                        <div class="absolute inset-0 h-full w-full bg-gradient-to-r from-emerald-500 to-emerald-700 scale-x-0 group-hover:scale-x-100 transform origin-left transition-transform duration-300 ease-out z-0"></div>
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button (Visible on Small Screens Only) -->
+                <button id="mobile-btn" class="md:hidden text-brand-900 text-2xl focus:outline-none z-[120] p-2 bg-white/80 rounded-md border border-emerald-200 transition-colors">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-900 backdrop-blur-md z-[130] transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center space-y-8 h-[100dvh] w-full">
+        <!-- Dedicated Close Button -->
+        <button id="close-menu-btn" class="absolute top-6 right-6 sm:top-8 sm:right-8 text-white text-4xl p-2 hover:text-emerald-400 transition-transform hover:scale-110 focus:outline-none cursor-pointer">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <a href="#expertise" class="mobile-link text-3xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">Treatments</a>
+        <a href="#about" class="mobile-link text-3xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">About</a>
+        <a href="#facilities" class="mobile-link text-3xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">Facilities</a>
+        <a href="#appointment" class="mobile-link text-3xl font-heading font-bold text-white hover:text-emerald-400 transition-colors">Find Us</a>
+        <a href="#appointment" class="mobile-link mt-8 px-8 py-4 bg-emerald-500 text-white font-bold rounded-full text-xl shadow-[0_10px_30px_rgba(16,185,129,0.3)] hover:scale-105 transition-transform">Book Appointment</a>
+    </div>
+
+    <main>
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-900">
+            <!-- Dynamic Background -->
+            <div class="absolute inset-0 z-0">
+                <img src="Images/hero.png" alt="Modern Hospital" class="w-full h-full object-cover opacity-20 mix-blend-overlay">
+                <div class="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/90 to-transparent"></div>
+                <!-- Abstract Globs -->
+                <div class="bg-blob w-[500px] h-[500px] bg-accent-500/20 top-[-100px] left-[-100px]"></div>
+                <div class="bg-blob w-[400px] h-[400px] bg-brand-600/30 bottom-[-50px] right-[-50px]"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Hero Content -->
+                    <div class="lg:col-span-7 text-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-500/10 border border-accent-500/30 text-accent-500 text-sm font-bold mb-6 reveal-up">
+                            <span class="w-2 h-2 rounded-full bg-accent-500 animate-ping"></span>
+                            North India's First Spine Endoscopy Center
+                        </div>
+                        
+                        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-heading font-extrabold text-white leading-[1.1] mb-6 reveal-up delay-100">
+                            Freedom from Pain, <br>
+                            <span class="text-gradient">Without Stitches.</span>
+                        </h1>
+                        
+                        <p class="text-lg text-gray-300 font-medium mb-8 max-w-2xl leading-relaxed reveal-up delay-200">
+                            Experience advanced, minimally invasive treatments for complex spine, neck, and joint disorders under the expert care of Dr. S. K. Jaiswal. Quick recovery, zero general anesthesia in most cases.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-4 reveal-up delay-300">
+                            <a href="#appointment" class="bg-accent-500 hover:bg-accent-600 text-brand-900 px-8 py-4 rounded-full font-bold text-lg shadow-glow transition-all flex items-center gap-2 transform hover:-translate-y-1">
+                                Book Consultation <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <a href="tel:+919889566818" class="bg-glass-dark text-white border border-white/20 hover:bg-white/10 px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center gap-2 backdrop-blur-md">
+                                <i class="fa-solid fa-phone-volume text-accent-500"></i> +91 98895 66818
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual / Quick Contact -->
+                    <div class="lg:col-span-5 reveal-left delay-200">
+                        <div class="glass-dark rounded-3xl p-8 relative overflow-hidden shadow-2xl border border-white/10">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-accent-500/10 rounded-bl-[100px] z-0"></div>
+                            
+                            <h3 class="text-2xl font-heading font-bold text-white mb-2 relative z-10">Advanced Neuro Spine <br>Pain Management Centre</h3>
+                            <p class="text-accent-500 text-sm font-semibold mb-6 relative z-10"></p>
+                            
+                            <ul class="space-y-4 relative z-10">
+                                <li class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-emerald-800 flex items-center justify-center shrink-0 text-white">
+                                        <i class="fa-solid fa-shield-heart"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs text-emerald-200 font-bold uppercase tracking-wider">Our Expertise, Your Relief</p>
+                                        <p class="text-white pt-1 font-medium text-sm">Empanelled under Ayushman Bharat (PMJAY) scheme.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trust Strip below Hero -->
+            <div class="absolute bottom-0 w-full bg-brand-800/80 backdrop-blur-sm border-t border-white/10 py-4 hidden md:block">
+                <div class="max-w-7xl mx-auto px-4 flex justify-between items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                    <div class="flex items-center gap-2 text-white font-heading font-bold text-lg"><i class="fa-solid fa-building-columns"></i> AIIMS Delhi Exp.</div>
+                    <div class="flex items-center gap-2 text-white font-heading font-bold text-lg"><i class="fa-solid fa-building"></i> Sir Ganga Ram Exp.</div>
+                    <div class="flex items-center gap-2 text-white font-heading font-bold text-lg"><i class="fa-solid fa-graduation-cap"></i> IMS, BHU Alumni</div>
+                    <div class="flex items-center gap-2 text-white font-heading font-bold text-lg"><i class="fa-regular fa-id-card"></i> Ayushman Bharat</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-16 pb-12 bg-medgreen-50 border-b border-medgreen-100 overflow-hidden relative">
+            <div class="max-w-7xl mx-auto px-4 mb-8 text-center reveal-up">
+                <h4 class="text-medgreen-800 font-bold tracking-[0.2em] uppercase text-sm mb-2">Gallery</h4>
+                <h2 class="text-3xl font-heading font-extrabold text-brand-900">Modern Infrastructure</h2>
+            </div>
+            
+            <!-- Gradient Overlays for smooth edges -->
+            <div class="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-medgreen-50 to-transparent z-10"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-medgreen-50 to-transparent z-10"></div>
+
+            <div class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+                <!-- Inner track container with doubled content for seamless looping -->
+                <div class="flex items-center justify-center md:justify-start animate-marquee gap-6">
+                    <!-- Image 1 -->
+                    <div class="w-80 h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-4 border-white">
+                        <img src="Images/drcabin.png" alt="Advanced Operating Room" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="w-80 h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-4 border-white">
+                        <img src="Images/entrance.png" alt="Comfortable Patient Ward" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="w-80 h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-4 border-white">
+                        <img src="Images/reception.png" alt="Modern Medical Equipment" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Image 4 -->
+                    <div class="w-80 h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-4 border-white">
+                        <img src="Images/treatment.png" alt="Clean Hospital Hallways" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Image 5 -->
+                    <div class="w-80 h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-4 border-white">
+                        <img src="Images/outside.png" alt="Specialist Consultation" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- DUPLICATE SET for seamless loop -->
+                    <div class="w-80 h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-4 border-white">
+                        <img src="Images/drcabin.png" alt="Advanced Operating Room" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Image 2 -->
+                    <div class="w-80 h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-4 border-white">
+                        <img src="Images/entrance.png" alt="Comfortable Patient Ward" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Image 3 -->
+                    <div class="w-80 h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-4 border-white">
+                        <img src="Images/reception.png" alt="Modern Medical Equipment" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Image 4 -->
+                    <div class="w-80 h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-4 border-white">
+                        <img src="Images/treatment.png" alt="Clean Hospital Hallways" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Image 5 -->
+                    <div class="w-80 h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-md border-4 border-white">
+                        <img src="Images/outside.png" alt="Specialist Consultation" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 bg-medgreen-50 relative">
+            <!-- Decorative Pattern -->
+            <div class="absolute inset-0 opacity-[0.03] z-0" style="background-image: radial-gradient(#065F46 2px, transparent 2px); background-size: 30px 30px;"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Stats Row - Standardized styling with border dividers -->
+                <div class="bg-white rounded-3xl shadow-green-soft border border-medgreen-100 p-8 mb-24 reveal-up">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x-0 md:divide-x-2 divide-medgreen-50">
+                        <div class="text-center">
+                            <div class="text-4xl md:text-5xl font-heading font-extrabold text-brand-900 mb-2">15<span class="text-medgreen-800">+</span></div>
+                            <p class="text-gray-500 font-semibold text-sm uppercase tracking-wider">Years Experience</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl md:text-5xl font-heading font-extrabold text-brand-900 mb-2">10k<span class="text-medgreen-800">+</span></div>
+                            <p class="text-gray-500 font-semibold text-sm uppercase tracking-wider">Patients Treated</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl md:text-5xl font-heading font-extrabold text-brand-900 mb-2">0<span class="text-medgreen-800">%</span></div>
+                            <p class="text-gray-500 font-semibold text-sm uppercase tracking-wider">Major Stitches</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl md:text-5xl font-heading font-extrabold text-brand-900 mb-2">24<span class="text-medgreen-800">/7</span></div>
+                            <p class="text-gray-500 font-semibold text-sm uppercase tracking-wider">Emergency Care</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Left Side: Slider -->
+                    <div class="relative reveal-right">
+                        <!-- Image Composition - Slider -->
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] z-10 group" id="about-slider">
+                            <div class="flex w-full h-full transition-transform duration-500 ease-in-out" id="slider-track">
+                                <img src="Images/hall.png" alt="Advanced Medical Technology" class="w-full h-full object-cover flex-shrink-0">
+                                <img src="Images/outside.png" alt="Modern Hospital Ward" class="w-full h-full object-cover flex-shrink-0">
+                                <img src="Images/operation.png" alt="Surgery Prep" class="w-full h-full object-cover flex-shrink-0">
+                            </div>
+                            <div class="absolute inset-0 bg-brand-900/10 pointer-events-none"></div>
+                            
+                            <!-- Controls -->
+                            <button onclick="moveSlider(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 backdrop-blur-sm text-brand-900 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-lg hover:bg-emerald-500 hover:text-white z-20">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button onclick="moveSlider(1)" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 backdrop-blur-sm text-brand-900 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-lg hover:bg-emerald-500 hover:text-white z-20">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                            
+                            <!-- Dots -->
+                            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20" id="slider-dots">
+                                <button onclick="setSlide(0)" class="w-2 h-2 rounded-full bg-white transition-all w-6"></button>
+                                <button onclick="setSlide(1)" class="w-2 h-2 rounded-full bg-white/50 transition-all"></button>
+                                <button onclick="setSlide(2)" class="w-2 h-2 rounded-full bg-white/50 transition-all"></button>
+                            </div>
+                        </div>
+                        <!-- Decorative Elements -->
+                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-emerald-300 rounded-full mix-blend-multiply filter blur-2xl opacity-50 z-0"></div>
+                    </div>
+
+                    <!-- Right Side: Content -->
+                    <div class="reveal-left">
+                        <h4 class="text-medgreen-800 font-bold tracking-[0.2em] uppercase text-sm mb-3">About Our Center</h4>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-brand-900 mb-6 leading-tight">
+                            Pioneering Next-Gen <br>Pain Management.
+                        </h2>
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                            Located in the heart of Kakarmatta, Varanasi, Advanced Neuro Spine Pain Management Centre is dedicated to eradicating chronic pain and spinal disorders. We are proud to be the pioneers of stitchless, minimally invasive spine endoscopy in North India.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                            Our philosophy replaces traditional, heavy-cutting surgeries with precision micro-interventions. This means our patients experience significantly less pain, near-zero infection risk, and can often walk home the very same day.
+                        </p>
+                        
+                        <div class="bg-white rounded-2xl p-6 shadow-sm border border-medgreen-100 mb-10">
+                            <h5 class="font-bold text-brand-900 mb-4 border-b border-medgreen-50 pb-2">Why Choose Us?</h5>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                    <div class="w-8 h-8 rounded-full bg-medgreen-100 flex items-center justify-center text-medgreen-800 shrink-0"><i class="fa-solid fa-microscope text-sm"></i></div> 
+                                    Stitchless Endoscopic Operations
+                                </li>
+                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                    <div class="w-8 h-8 rounded-full bg-medgreen-100 flex items-center justify-center text-medgreen-800 shrink-0"><i class="fa-solid fa-syringe text-sm"></i></div> 
+                                    Procedures without General Anesthesia
+                                </li>
+                                <li class="flex items-center gap-3 text-gray-700 font-medium">
+                                    <div class="w-8 h-8 rounded-full bg-medgreen-100 flex items-center justify-center text-medgreen-800 shrink-0"><i class="fa-solid fa-bed-pulse text-sm"></i></div> 
+                                    Rapid Recovery & Same-Day Discharge
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <a href="#expertise" class="inline-block pb-1 border-b-2 border-medgreen-800 text-brand-900 font-bold hover:text-medgreen-800 transition-colors">
+                            Explore Our Treatments <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise" class="py-24 bg-medgreen-100/50 border-t border-medgreen-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
+                    <h4 class="text-medgreen-800 font-bold tracking-[0.2em] uppercase text-sm mb-3">Areas of Expertise</h4>
+                    <h2 class="text-3xl md:text-5xl font-heading font-extrabold text-brand-900 mb-6">Comprehensive Care <br>for Chronic Conditions</h2>
+                    <p class="text-gray-700 text-lg">We employ state-of-the-art medical technology to accurately diagnose and permanently treat a wide spectrum of severe pain disorders.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Treatment Card 1 -->
+                    <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl border border-medgreen-100 transition-all duration-300 transform hover:-translate-y-2 reveal-up">
+                        <div class="w-16 h-16 rounded-2xl bg-medgreen-50 text-medgreen-800 flex items-center justify-center text-3xl mb-6 group-hover:bg-medgreen-800 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-person-walking"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-brand-900 mb-4">Back & Spine Pain</h3>
+                        <p class="text-gray-600 mb-6">Advanced endoscopic discectomy for severe disc problems and failed surgery syndrome.</p>
+                        <div class="bg-medgreen-50 p-4 rounded-xl border border-medgreen-100">
+                            <h5 class="text-xs font-bold text-brand-900 uppercase tracking-wider mb-2">Treats Symptoms:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Sciatica & Disc Bulge</li>
+                                <li>• Tingling & Numbness</li>
+                                <li>• Severe Leg Weakness</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Treatment Card 2 -->
+                    <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl border border-medgreen-100 transition-all duration-300 transform hover:-translate-y-2 reveal-up delay-100">
+                        <div class="w-16 h-16 rounded-2xl bg-medgreen-50 text-medgreen-800 flex items-center justify-center text-3xl mb-6 group-hover:bg-medgreen-800 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-head-side-virus"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-brand-900 mb-4">Facial & Head Pain</h3>
+                        <p class="text-gray-600 mb-6">Specialized interventions for excruciating facial nerve pain, including RF & Balloon Compression.</p>
+                        <div class="bg-medgreen-50 p-4 rounded-xl border border-medgreen-100">
+                            <h5 class="text-xs font-bold text-brand-900 uppercase tracking-wider mb-2">Treats Symptoms:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Trigeminal Neuralgia</li>
+                                <li>• Chronic Head Pain</li>
+                                <li>• Facial Nerve Shocks</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Treatment Card 3 -->
+                    <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl border border-medgreen-100 transition-all duration-300 transform hover:-translate-y-2 reveal-up delay-200">
+                        <div class="w-16 h-16 rounded-2xl bg-medgreen-50 text-medgreen-800 flex items-center justify-center text-3xl mb-6 group-hover:bg-medgreen-800 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-user-injured"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-brand-900 mb-4">Neck Pain & Shoulders</h3>
+                        <p class="text-gray-600 mb-6">Targeted cervical epidurals and radio frequency treatment for mobility restoration.</p>
+                        <div class="bg-medgreen-50 p-4 rounded-xl border border-medgreen-100">
+                            <h5 class="text-xs font-bold text-brand-900 uppercase tracking-wider mb-2">Treats Symptoms:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Cervical Spondylitis</li>
+                                <li>• Frozen Shoulder</li>
+                                <li>• Pain radiating to hands</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Treatment Card 4 -->
+                    <div class="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl border border-medgreen-100 transition-all duration-300 transform hover:-translate-y-2 reveal-up">
+                        <div class="w-16 h-16 rounded-2xl bg-medgreen-50 text-medgreen-800 flex items-center justify-center text-3xl mb-6 group-hover:bg-medgreen-800 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-bone"></i>
+                        </div>
+                        <h3 class="text-2xl font-heading font-bold text-brand-900 mb-4">Joint Pain Therapy</h3>
+                        <p class="text-gray-600 mb-6">Regenerative medicine utilizing the patient's own blood and cells for natural healing.</p>
+                        <div class="bg-medgreen-50 p-4 rounded-xl border border-medgreen-100">
+                            <h5 class="text-xs font-bold text-brand-900 uppercase tracking-wider mb-2">Procedures & Symptoms:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• PRP & Stem Cell Therapy</li>
+                                <li>• Arthritis & Knee Sounds</li>
+                                <li>• Leg and Sole Pain</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Large Feature Card for Cancer Pain -->
+                    <div class="group bg-brand-900 rounded-3xl p-8 shadow-xl md:col-span-2 relative overflow-hidden reveal-up delay-100">
+                        <div class="absolute right-0 bottom-0 opacity-10 transform translate-x-1/4 translate-y-1/4">
+                            <i class="fa-solid fa-ribbon text-[200px] text-white"></i>
+                        </div>
+                        <div class="relative z-10 flex flex-col justify-center h-full">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold w-max mb-4">
+                                Specialized Care
+                            </div>
+                            <h3 class="text-3xl font-heading font-bold text-white mb-4">Interventional Cancer Pain Management</h3>
+                            <p class="text-gray-300 mb-6 max-w-lg leading-relaxed">
+                                We provide deeply compassionate and highly specialized interventions to manage and alleviate severe pain related to cancer, vastly improving the patient's quality of life during difficult times.
+                            </p>
+                            <a href="#appointment" class="text-accent-500 font-bold hover:text-white transition-colors flex items-center gap-2 w-max">
+                                Discuss with our specialist <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="doctor" class="py-24 bg-medgreen-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-brand-900 rounded-[40px] overflow-hidden shadow-2xl">
+                    <div class="grid lg:grid-cols-2">
+                        <!-- Image Side -->
+                        <div class="relative h-96 lg:h-auto border-r-4 border-medgreen-800">
+                            <!-- High quality placeholder for a doctor -->
+                            <img src="Images/drcabin.png" alt="Dr. S. K. Jaiswal" class="w-full h-full object-cover object-top opacity-90">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-900 via-brand-900/40 to-transparent lg:bg-gradient-to-r"></div>
+                        </div>
+                        
+                        <!-- Details Side -->
+                        <div class="p-10 lg:p-16 relative">
+                            <!-- Background abstract shape -->
+                            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-800 rounded-full mix-blend-screen filter blur-3xl opacity-50 z-0"></div>
+                            
+                            <div class="relative z-10">
+                                <h4 class="text-accent-500 font-bold tracking-widest uppercase text-sm mb-2">Lead Specialist</h4>
+                                <h2 class="text-4xl lg:text-5xl font-heading font-extrabold text-white mb-2">Dr. S. K. Jaiswal</h2>
+                                <p class="text-xl text-gray-300 font-medium mb-8">Spine Endoscopist & Interventional Pain Physician</p>
+                                
+                                <div class="space-y-8">
+                                    <!-- Education -->
+                                    <div>
+                                        <h5 class="flex items-center gap-2 text-white font-bold mb-4 border-b border-white/20 pb-2">
+                                            <i class="fa-solid fa-user-graduate text-accent-500"></i> Qualifications
+                                        </h5>
+                                        <ul class="space-y-3">
+                                            <li class="flex items-start gap-3 text-gray-300">
+                                                <i class="fa-solid fa-angle-right text-accent-500 mt-1"></i>
+                                                <div>
+                                                    <span class="font-bold text-white">M.S. (Anaesthesiology)</span> - IMS, Banaras Hindu University (2008)
+                                                </div>
+                                            </li>
+                                            <li class="flex items-start gap-3 text-gray-300">
+                                                <i class="fa-solid fa-angle-right text-accent-500 mt-1"></i>
+                                                <div>
+                                                    <span class="font-bold text-white">M.B.B.S.</span> - IMS, Banaras Hindu University (2003)
+                                                </div>
+                                            </li>
+                                            <li class="flex items-start gap-3 text-gray-300">
+                                                <i class="fa-solid fa-angle-right text-accent-500 mt-1"></i>
+                                                <div>
+                                                    <span class="font-bold text-white">P.D.C.C.</span> - Pain Management
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <!-- Experience -->
+                                    <div>
+                                        <h5 class="flex items-center gap-2 text-white font-bold mb-4 border-b border-white/20 pb-2">
+                                            <i class="fa-solid fa-hospital-user text-accent-500"></i> Noted Experience & Associations
+                                        </h5>
+                                        
+                                        <!-- Grid for standard experience items -->
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                                            <div class="bg-brand-800/50 p-4 rounded-xl border border-brand-700">
+                                                <p class="text-accent-500 font-bold mb-1">AIIMS, New Delhi</p>
+                                                <p class="text-xs text-gray-400">Associated in 2018 & 2019</p>
+                                            </div>
+                                            <div class="bg-brand-800/50 p-4 rounded-xl border border-brand-700">
+                                                <p class="text-accent-500 font-bold mb-1">Sir Ganga Ram Hosp.</p>
+                                                <p class="text-xs text-gray-400">New Delhi - 2018</p>
+                                            </div>
+                                            <div class="bg-brand-800/50 p-4 rounded-xl border border-brand-700">
+                                                <p class="text-accent-500 font-bold mb-1">BHU, Varanasi</p>
+                                                <p class="text-xs text-gray-400">Associated in 2016</p>
+                                            </div>
+                                            <div class="bg-brand-800/50 p-4 rounded-xl border border-brand-700">
+                                                <p class="text-accent-500 font-bold mb-1">ISPCCON</p>
+                                                <p class="text-xs text-gray-400">Organized by KGMU</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- PMJAY Full Width Responsive Card -->
+                                        <div class="flex flex-col sm:flex-row items-start gap-4 p-5 rounded-2xl bg-white border border-emerald-100 shadow-sm hover:shadow-md transition-shadow">
+                                            <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 text-xl">
+                                                <i class="fa-regular fa-id-card"></i>
+                                            </div>
+                                            <div class="w-full">
+                                                <h5 class="font-bold text-brand-900 text-lg">PMJAY Empanelled</h5>
+                                                <p class="text-sm text-gray-600 mb-3">Proudly empanelled under the Ayushman Bharat PMJAY scheme.</p>
+                                                <div class="flex flex-wrap gap-2">
+                                                    <span class="text-[10px] font-bold px-3 py-1.5 bg-emerald-50 text-emerald-800 rounded-md border border-emerald-200 whitespace-nowrap shadow-sm">SB - Orthopaedics</span>
+                                                    <span class="text-[10px] font-bold px-3 py-1.5 bg-emerald-50 text-emerald-800 rounded-md border border-emerald-200 whitespace-nowrap shadow-sm">SG - General Surgery</span>
+                                                    <span class="text-[10px] font-bold px-3 py-1.5 bg-emerald-50 text-emerald-800 rounded-md border border-emerald-200 whitespace-nowrap shadow-sm">SN - Neurosurgery</span>
+                                                    <span class="text-[10px] font-bold px-3 py-1.5 bg-emerald-50 text-emerald-800 rounded-md border border-emerald-200 whitespace-nowrap shadow-sm">ST - Polytrauma</span>
+                                                    <span class="text-[10px] font-bold px-3 py-1.5 bg-emerald-50 text-emerald-800 rounded-md border border-emerald-200 whitespace-nowrap shadow-sm">SU - Urology</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-medgreen-50 border-b border-medgreen-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 reveal-up">
+                    <h2 class="text-3xl md:text-4xl font-heading font-extrabold text-brand-900">Patient Queries Answered</h2>
+                </div>
+
+                <div class="space-y-4 reveal-up delay-100">
+                    <!-- FAQ 1 -->
+                    <details class="group bg-white border border-medgreen-200 rounded-2xl shadow-sm transition-all duration-300">
+                        <summary class="flex cursor-pointer items-center justify-between p-6 text-brand-900 font-bold text-lg">
+                            What exactly is Stitchless Spine Endoscopy?
+                            <span class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center bg-medgreen-50 rounded-full border border-medgreen-200 group-open:bg-brand-900 group-open:border-brand-900 group-open:text-white transition-colors">
+                                <i class="fa-solid fa-plus absolute opacity-100 group-open:opacity-0 transition-opacity"></i>
+                                <i class="fa-solid fa-minus absolute opacity-0 group-open:opacity-100 transition-opacity text-white"></i>
+                            </span>
+                        </summary>
+                        <p class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-medgreen-100 pt-4 mt-2">
+                            It is an ultra-minimally invasive surgical technique. Using a high-definition camera and micro-instruments inserted through an opening smaller than a keyhole, we remove the herniated disc causing nerve pressure. It requires no major cutting of muscles or bones, meaning no stitches, minimal bleeding, and much faster recovery.
+                        </p>
+                    </details>
+                    
+                    <!-- FAQ 2 -->
+                    <details class="group bg-white border border-medgreen-200 rounded-2xl shadow-sm transition-all duration-300">
+                        <summary class="flex cursor-pointer items-center justify-between p-6 text-brand-900 font-bold text-lg">
+                            Can I use my Ayushman Card here?
+                            <span class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center bg-white rounded-full border border-emerald-200 group-open:bg-brand-900 group-open:border-brand-900 group-open:text-white transition-colors">
+                                <i class="fa-solid fa-plus absolute opacity-100 group-open:opacity-0 transition-opacity"></i>
+                                <i class="fa-solid fa-minus absolute opacity-0 group-open:opacity-100 transition-opacity text-white"></i>
+                            </span>
+                        </summary>
+                        <p class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-emerald-100 pt-4 mt-2">
+                            Yes, absolutely. We are officially empanelled under the Ayushman Bharat PMJAY scheme for major specialties including Orthopaedics (SB), General Surgery (SG), Neurosurgery (SN), Polytrauma (ST), and Urology (SU). We also accept standard cash payments.
+                        </p>
+                    </details>
+
+                    <!-- FAQ 3 -->
+                    <details class="group bg-white border border-medgreen-200 rounded-2xl shadow-sm transition-all duration-300">
+                        <summary class="flex cursor-pointer items-center justify-between p-6 text-brand-900 font-bold text-lg">
+                            Do I need to be put to sleep (General Anesthesia) for procedures?
+                            <span class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center bg-medgreen-50 rounded-full border border-medgreen-200 group-open:bg-brand-900 group-open:border-brand-900 group-open:text-white transition-colors">
+                                <i class="fa-solid fa-plus absolute opacity-100 group-open:opacity-0 transition-opacity"></i>
+                                <i class="fa-solid fa-minus absolute opacity-0 group-open:opacity-100 transition-opacity text-white"></i>
+                            </span>
+                        </summary>
+                        <p class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-medgreen-100 pt-4 mt-2">
+                            In many cases, no. Many of our endoscopic and interventional procedures can be performed under local anesthesia. This significantly reduces risks associated with general anesthesia and allows you to communicate with the doctor during the procedure if needed.
+                        </p>
+                    </details>
+
+                    <!-- FAQ 4 -->
+                    <details class="group bg-white border border-medgreen-200 rounded-2xl shadow-sm transition-all duration-300" open>
+                        <summary class="flex cursor-pointer items-center justify-between p-6 text-brand-900 font-bold text-lg">
+                            How do I schedule an appointment?
+                            <span class="relative w-6 h-6 flex-shrink-0 flex items-center justify-center bg-medgreen-50 rounded-full border border-medgreen-200 group-open:bg-brand-900 group-open:border-brand-900 group-open:text-white transition-colors">
+                                <i class="fa-solid fa-plus absolute opacity-100 group-open:opacity-0 transition-opacity"></i>
+                                <i class="fa-solid fa-minus absolute opacity-0 group-open:opacity-100 transition-opacity text-white"></i>
+                            </span>
+                        </summary>
+                        <p class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-medgreen-100 pt-4 mt-2">
+                            Since Dr. Jaiswal’s schedule is highly demanded, we strongly advise booking in advance to avoid wait times. You can call our numbers (98895 66818, 7084444600) directly, use the WhatsApp button on this site, or fill out the booking form below.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="appointment" class="py-24 bg-brand-900 relative">
+            <!-- Decorative background map pattern -->
+            <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#00E5FF 1px, transparent 1px); background-size: 30px 30px;"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="bg-white rounded-[40px] shadow-[0_20px_50px_rgba(0,0,0,0.3)] overflow-hidden reveal-up">
+                    <div class="grid lg:grid-cols-2">
+                        
+                        <!-- Map & Contact Info -->
+                        <div class="bg-medgreen-50 p-10 lg:p-14 border-r border-medgreen-200 flex flex-col h-full">
+                            <h3 class="text-3xl font-heading font-extrabold text-brand-900 mb-2">Visit the Clinic</h3>
+                            <p class="text-gray-600 mb-8">Located near Manduadih Railway Station for easy accessibility.</p>
+                            
+                            <div class="space-y-6 mb-8 flex-grow">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-white shadow-sm border border-medgreen-100 text-medgreen-800 flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div>
+                                        <h4 class="font-bold text-brand-900">Address</h4>
+                                        <p class="text-gray-600 text-sm mt-1">N-10/58-J-198, Lane No. 2, Near Manduadih Railway Station & Papular Hospital, Sri Ram Nagar Colony, Kakarmatta, Varanasi, UP 221004</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-white shadow-sm border border-medgreen-100 text-medgreen-800 flex items-center justify-center shrink-0"><i class="fa-solid fa-phone"></i></div>
+                                    <div>
+                                        <h4 class="font-bold text-brand-900">Helplines</h4>
+                                        <p class="text-gray-600 text-sm mt-1">98895 66818 / 7084444600 / 8574875003</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Map Embed -->
+                            <div class="w-full h-64 rounded-2xl overflow-hidden shadow-inner border border-medgreen-200">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.840742137599!2d82.97723907604313!3d25.30953932713337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2de26a31c51b%3A0xc619bb32d919d7d4!2sKakarmata%2C%20Varanasi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <!-- Form Section -->
+                        <div class="p-10 lg:p-14">
+                            <h3 class="text-3xl font-heading font-extrabold text-brand-900 mb-2">Request an Appointment</h3>
+                            <p class="text-gray-600 mb-8">Fill out the form below. Our staff will prioritize your request and call to confirm your slot.</p>
+
+                            <!-- Success Message Hidden by Default -->
+                            <div id="form-success" class="hidden bg-green-50 border border-green-200 text-green-700 rounded-2xl p-6 mb-6">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <i class="fa-solid fa-circle-check text-2xl"></i>
+                                    <h4 class="font-bold text-lg">Request Received!</h4>
+                                </div>
+                                <p class="text-sm">Thank you. Our reception team will contact you shortly to confirm your appointment time with Dr. Jaiswal.</p>
+                            </div>
+
+                            <form id="booking-form" class="space-y-5">
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Patient Full Name *</label>
+                                    <input type="text" id="p_name" required class="w-full px-5 py-4 bg-medgreen-50 border border-medgreen-200 rounded-xl focus:ring-2 focus:ring-brand-600 focus:border-brand-600 outline-none transition-all" placeholder="Enter name">
+                                </div>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                    <div>
+                                        <label class="block text-sm font-bold text-gray-700 mb-2">Phone Number *</label>
+                                        <input type="tel" id="p_phone" required class="w-full px-5 py-4 bg-medgreen-50 border border-medgreen-200 rounded-xl focus:ring-2 focus:ring-brand-600 focus:border-brand-600 outline-none transition-all" placeholder="+91 XXXXX XXXXX">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-bold text-gray-700 mb-2">Issue / Treatment Needed</label>
+                                        <select id="p_treatment" class="w-full px-5 py-4 bg-medgreen-50 border border-medgreen-200 rounded-xl focus:ring-2 focus:ring-brand-600 focus:border-brand-600 outline-none transition-all text-gray-700">
+                                            <option value="spine">Spine / Back Pain</option>
+                                            <option value="neck">Neck / Shoulder Pain</option>
+                                            <option value="joint">Joint / Knee Pain</option>
+                                            <option value="facial">Facial / Trigeminal Pain</option>
+                                            <option value="other">Other / General Consultation</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-sm font-bold text-gray-700 mb-2">Brief Message (Optional)</label>
+                                    <textarea id="p_message" rows="3" class="w-full px-5 py-4 bg-medgreen-50 border border-medgreen-200 rounded-xl focus:ring-2 focus:ring-brand-600 focus:border-brand-600 outline-none transition-all resize-none" placeholder="Describe how long you've had pain..."></textarea>
+                                </div>
+
+                                <button type="submit" id="submit-btn" class="w-full bg-brand-900 hover:bg-brand-800 text-white font-bold text-lg py-4 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3 mt-4 group">
+                                    <span>Confirm Booking Request</span>
+                                    <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </button>
+                                
+                                <p class="text-center text-xs text-gray-500 mt-4 flex items-center justify-center gap-1">
+                                    <i class="fa-solid fa-lock"></i> SSL Secured. Your data is strictly confidential.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#050A15] text-gray-400 py-16 border-t-4 border-medgreen-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-white/10 pb-12">
+                
+                <div class="lg:col-span-1">
+                    <a href="#" class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-staff-snake text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h1 class="font-heading font-extrabold text-white text-lg leading-none tracking-tight">Advanced Neuro</h1>
+                            <p class="text-[9px] font-bold text-medgreen-200 tracking-[0.2em] uppercase mt-1">Pain Management</p>
+                        </div>
+                    </a>
+                    <p class="text-sm leading-relaxed mb-6">Varanasi's premier center for stitchless spine endoscopy and comprehensive interventional pain management.</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-medgreen-800 hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-medgreen-800 hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Navigation</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#about" class="hover:text-medgreen-200 transition-colors">The Center & Story</a></li>
+                        <li><a href="#expertise" class="hover:text-medgreen-200 transition-colors">Specialized Treatments</a></li>
+                        <li><a href="#doctor" class="hover:text-medgreen-200 transition-colors">Dr. S. K. Jaiswal Profile</a></li>
+                        <li><a href="#facilities" class="hover:text-medgreen-200 transition-colors">Facilities & Schemes</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Treatments</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-medgreen-200 transition-colors">Spine Endoscopic Surgery</a></li>
+                        <li><a href="#" class="hover:text-medgreen-200 transition-colors">Trigeminal Neuralgia RF</a></li>
+                        <li><a href="#" class="hover:text-medgreen-200 transition-colors">PRP Stem Cell Therapy</a></li>
+                        <li><a href="#" class="hover:text-medgreen-200 transition-colors">Cancer Pain Management</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contact Info</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-truck-medical text-medgreen-200"></i> +91 98895 66818</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-medgreen-200"></i>+91 8574875003 </li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-location-arrow text-medgreen-200"></i> Kakarmatta, Varanasi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; <span id="year"></span> Advanced Neuro Spine Pain Management Centre. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp Floating Button -->
+    <a href="https://wa.me/919889566818?text=Hello%20Dr.%20Jaiswal's%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-[0_10px_30px_rgba(37,211,102,0.4)] hover:bg-[#128C7E] hover:scale-110 transition-all duration-300 floating">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Set Current Year dynamically
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                // Using the new light green utility class for the scrolled navbar
+                navbar.classList.add('shadow-md', 'bg-medgreen-50/95');
+                navbar.classList.remove('bg-medgreen-50/80');
+            } else {
+                navbar.classList.remove('shadow-md', 'bg-medgreen-50/95');
+                navbar.classList.add('bg-medgreen-50/80');
+            }
+        });
+
+        // Mobile Menu Toggle Logic
+        const mobileBtn = document.getElementById('mobile-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function openMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        mobileBtn.addEventListener('click', openMenu);
+        closeMenuBtn.addEventListener('click', closeMenu);
+        
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Intersection Observer for Scroll Animations (AOS alternative)
+        const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+        
+        const revealOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('reveal-active');
+                observer.unobserve(entry.target); // Only animate once
+            });
+        }, revealOptions);
+        
+        revealElements.forEach(el => revealOnScroll.observe(el));
+
+        // About Section Slider Logic
+        let currentSlide = 0;
+        const totalSlides = 3;
+        const sliderTrack = document.getElementById('slider-track');
+        const sliderDots = document.getElementById('slider-dots')?.children;
+        let slideInterval;
+
+        window.moveSlider = function(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        window.setSlide = function(index) {
+            currentSlide = index;
+            updateSlider();
+            resetInterval();
+        }
+
+        function updateSlider() {
+            if(!sliderTrack) return;
+            sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+            if(sliderDots) {
+                for(let i=0; i<sliderDots.length; i++) {
+                    sliderDots[i].className = i === currentSlide 
+                        ? "w-2 h-2 rounded-full bg-white transition-all w-6" 
+                        : "w-2 h-2 rounded-full bg-white/50 transition-all";
+                }
+            }
+        }
+        
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(() => { moveSlider(1); }, 4000);
+        }
+        
+        if(sliderTrack) { resetInterval(); }
+
+        // Form Submission logic (Webhook & Meta Pixel Integration)
+        const form = document.getElementById('booking-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const successMsg = document.getElementById('form-success');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Gather form data
+            const payload = {
+                name: document.getElementById('p_name').value,
+                phone: document.getElementById('p_phone').value,
+                treatment: document.getElementById('p_treatment').value,
+                message: document.getElementById('p_message').value,
+                source: "Website Premium Landing Page"
+            };
+
+            // Loading state for button
+            const originalBtnContent = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Processing Request...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            try {
+                // IMPORTANT: Replace this placeholder with your actual Make.com/Zapier webhook URL
+                const webhookUrl = 'https://hook.us1.make.com/placeholder_webhook_url'; 
+                
+                // Fire Meta Pixel Event (Conversion Tracking)
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Lead', {
+                        content_name: 'Appointment Request submitted',
+                        content_category: payload.treatment
+                    });
+                }
+
+                // SIMULATION DELAY (Remove in production when fetch is uncommented)
+                await new Promise(resolve => setTimeout(resolve, 1500)); 
+                
+                /* Real fetch implementation for production:
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!response.ok) throw new Error('Network response was not ok');
+                */
+
+                // Show Success UI
+                form.reset();
+                form.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+
+            } catch (error) {
+                console.error('Submission error:', error);
+                // Create inline error message (No alerts allowed)
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'text-red-500 text-sm mt-3 font-bold flex items-center gap-2 p-3 bg-red-50 rounded-lg border border-red-200';
+                errorDiv.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Network error. Please click the WhatsApp button to book directly.';
+                
+                // Avoid duplicating error messages
+                if(!form.querySelector('.text-red-500')) {
+                    form.appendChild(errorDiv);
+                    setTimeout(() => errorDiv.remove(), 6000);
+                }
+            } finally {
+                // Restore button state
+                submitBtn.innerHTML = originalBtnContent;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+            }
+        });
+    </script>
+</body>
+</html>
